@@ -3,6 +3,7 @@ package com.tiago.custom_list_view;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 
+@SuppressLint("NewApi")
 public class CustomListViewActivity extends Activity implements OnItemClickListener , OnItemLongClickListener
 {
 	
@@ -60,13 +62,16 @@ public class CustomListViewActivity extends Activity implements OnItemClickListe
 	public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int arg2,
 			long arg3)
 	{
-		Toast.makeText(getApplicationContext(), "Long click detected", 1000).show();
+		
+		arg1.setActivated(true);
+		
+		//Toast.makeText(getApplicationContext(), "Long click detected", 1000).show();
 		return true;
 	}
 
 	
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3)
 	{
-		Toast.makeText(getApplicationContext(), "Normal click detected", 1000).show();
+		//Toast.makeText(getApplicationContext(), "Normal click detected", 1000).show();
 	}
 }
