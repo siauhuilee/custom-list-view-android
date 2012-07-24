@@ -30,6 +30,13 @@ public class CustomListViewActivity extends Activity implements OnItemClickListe
 		listOfItemToShow = new ArrayList<ItemToShow>();
 		listOfItemToShow.add(new ItemToShow("Test 1 ", "Detail 1"));
 		listOfItemToShow.add(new ItemToShow("Test 2 ", "Detail 2"));
+		listOfItemToShow.add(new ItemToShow("Test 3 ", "Detail 3"));
+		listOfItemToShow.add(new ItemToShow("Test 4 ", "Detail 4"));
+		listOfItemToShow.add(new ItemToShow("Test 5 ", "Detail 5"));
+		listOfItemToShow.add(new ItemToShow("Test 6 ", "Detail 6"));
+		listOfItemToShow.add(new ItemToShow("Test 7 ", "Detail 7"));
+		listOfItemToShow.add(new ItemToShow("Test 8 ", "Detail 8"));
+		
 		
 
 		ItemToShowAdapter adapter = new ItemToShowAdapter(this, listOfItemToShow);
@@ -49,15 +56,15 @@ public class CustomListViewActivity extends Activity implements OnItemClickListe
 		
 	}
 
-	@Override
+	
 	public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int arg2,
 			long arg3)
 	{
 		Toast.makeText(getApplicationContext(), "Long click detected", 1000).show();
-		return false;
+		return true;
 	}
 
-	@Override
+	
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3)
 	{
 		Toast.makeText(getApplicationContext(), "Normal click detected", 1000).show();

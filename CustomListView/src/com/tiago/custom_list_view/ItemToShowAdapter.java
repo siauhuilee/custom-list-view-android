@@ -23,32 +23,32 @@ public class ItemToShowAdapter extends BaseAdapter implements OnClickListener
         this.listItemToShow = listPhonebook;
     }
     
-	@Override
+	
 	public void onClick(View v)
 	{
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public int getCount()
 	{
 		return listItemToShow.size();
 	}
 
-	@Override
+	
 	public Object getItem(int position)
 	{
 		return listItemToShow.get(position);
 	}
 
-	@Override
+	
 	public long getItemId(int position)
 	{
 		return position;
 	}
 
-	@Override
+	
 	public View getView(int position, View convertView, ViewGroup viewGroup)
 	{
 		ItemToShow entry = listItemToShow.get(position);
