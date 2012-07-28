@@ -2,6 +2,7 @@ package com.tiago.custom_list_view;
 
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +50,7 @@ public class ItemToShowAdapter extends BaseAdapter implements OnClickListener
 	}
 
 	
+	@SuppressLint("NewApi")
 	public View getView(int position, View convertView, ViewGroup viewGroup)
 	{
 		ItemToShow entry = listItemToShow.get(position);
@@ -81,6 +83,7 @@ public class ItemToShowAdapter extends BaseAdapter implements OnClickListener
         */
 
         // btnRemove.setId(position);
+        
         
 
         return convertView;
