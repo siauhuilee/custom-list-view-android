@@ -63,7 +63,8 @@ public class CustomListViewActivity extends Activity implements OnItemClickListe
 			long arg3)
 	{
 		
-		arg1.setActivated(true);
+		//arg1.setActivated(true);
+		arg1.setSelected(true);
 		
 		//Toast.makeText(getApplicationContext(), "Long click detected", 1000).show();
 		return true;
@@ -72,6 +73,7 @@ public class CustomListViewActivity extends Activity implements OnItemClickListe
 	
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3)
 	{
+		//arg1.setActivated(true);
 		//Toast.makeText(getApplicationContext(), "Normal click detected", 1000).show();
 	}
 }
